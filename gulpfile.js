@@ -2,6 +2,7 @@ const { src, dest, series, watch } = require(`gulp`);
 const htmlValidator = require(`gulp-html`);
 const jsLinter = require(`gulp-eslint`);
 const sass = require(`gulp-sass`)(require(`sass`));
+const babel = require(`gulp-babel`);
 const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
 
