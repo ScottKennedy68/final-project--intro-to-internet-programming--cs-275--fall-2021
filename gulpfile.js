@@ -52,12 +52,6 @@ let validateHTML = () => {
     return src([`./*.html`, `html/**/*.html`]).pipe(htmlValidator());
 };
 
-let compressHTML = () => {
-    return src([`./*.html`,`html/**/*.html`])
-        .pipe(htmlCompressor({collapseWhitespace: true}))
-        .pipe(dest(`prod`));
-};
-
 let compileCSSForDev = () => {
     return src(`css/style.css`)
         .pipe(sass.sync({
@@ -111,11 +105,9 @@ exports.safari = series(safari, serve);
 exports.vivaldi = series(vivaldi, serve);
 exports.allBrowsers = series(allBrowsers, serve);
 exports.validateHTML = validateHTML;
-exports.HTMLProcessing = series(validateHTML, compressHTML);
 exports.lintJS = lintJS;
 exports.compileCSSForDev = compileCSSForDev;
 exports.transpileJSForDev = transpileJSForDev;
-exports.copyUnprocessedAssetsForProd = copyUnprocessedAssetsForProd;
 exports.serve = series(
     validateHTML,
     compileCSSForDev,
