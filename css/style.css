@@ -12,4 +12,5 @@
 
 .slide {
   display: flex;
+  transition: 250ms;
 }
