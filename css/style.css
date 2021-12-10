@@ -3,3 +3,9 @@
   margin-left: 860px;
   margin-top: 440px;
 }
+
+.slide-show {
+  margin: auto;
+  width: 210px;
+  overflow: hidden;
+}
