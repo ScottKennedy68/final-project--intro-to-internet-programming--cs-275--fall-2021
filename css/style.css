@@ -9,3 +9,7 @@
   width: 210px;
   overflow: hidden;
 }
+
+.slide {
+  display: flex;
+}
