@@ -4,10 +4,12 @@ let rightArrow = document.getElementById(`right-arrow`);
 let currentSlideIndex = 0;
 let slideWidth = 410;
 
-leftArrow.addEventListener(`click`, ()=>{
+function goToPreviousSlide() {
     currentSlideIndex--;
     slideShow.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
-});
+}
+
+leftArrow.addEventListener(`click`, goToPreviousSlide, false);
 
 rightArrow.addEventListener(`click`, ()=>{
     currentSlideIndex++;
