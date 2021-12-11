@@ -3,16 +3,22 @@ let leftArrow = document.getElementById(`left-arrow`);
 let rightArrow = document.getElementById(`right-arrow`);
 let currentSlideIndex = 0;
 let slideWidth = 410;
+let position;
 
 function goToPreviousSlide() {
-    currentSlideIndex--;
-    slideShow.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
+    if(0 !== currentSlideIndex) {
+        currentSlideIndex--;
+        position = -slideWidth * currentSlideIndex;
+        slideShow.style.transform = `translateX(${position}px)`;
+    }
 }
 
 function goToNextSlide() {
     currentSlideIndex++;
     slideShow.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
 }
+
+
 
 
 leftArrow.addEventListener(`click`, goToPreviousSlide, false);
