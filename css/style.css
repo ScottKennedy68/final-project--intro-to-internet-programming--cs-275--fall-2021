@@ -6,8 +6,8 @@
 
 .slide-show-box {
   margin: auto;
-  width: 410px;
-  height: 250px;
+  width: 446px;
+  height: 280px;
   overflow: hidden;
   background: #f3f3f3;
 }
@@ -19,6 +19,10 @@
 
 .slide {
   display: flex;
+}
+
+.image {
+  padding: 15px 18px;
 }
 
 .text {

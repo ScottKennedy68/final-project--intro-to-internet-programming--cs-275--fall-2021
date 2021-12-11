@@ -3,7 +3,7 @@ let slides = document.querySelectorAll(`.slide`);
 let leftArrow = document.getElementById(`left-arrow`);
 let rightArrow = document.getElementById(`right-arrow`);
 let currentSlideIndex = 0;
-let slideWidth = 410;
+let slideWidth = 446;
 let position;
 
 function goToPreviousSlide() {
