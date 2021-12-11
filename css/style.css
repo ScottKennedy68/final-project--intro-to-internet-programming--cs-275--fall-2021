@@ -1,3 +1,9 @@
+h1 {
+  font-size: 32px;
+  line-height: 2.4em;
+  text-align: center;
+}
+
 .arrow {
   position: fixed;
   margin-left: 860px;
