@@ -11,6 +11,10 @@ function goToPreviousSlide() {
         currentSlideIndex--;
         position = -slideWidth * currentSlideIndex;
         slideShow.style.transform = `translateX(${position}px)`;
+        if(0 === currentSlideIndex)
+            leftArrow.classList.add(`off`);
+        else if((slides.length - 1) !== currentSlideIndex)
+            rightArrow.classList.remove(`off`);
     }
 }
 
@@ -19,11 +23,12 @@ function goToNextSlide() {
         currentSlideIndex++;
         position = -slideWidth * currentSlideIndex;
         slideShow.style.transform = `translateX(${position}px)`;
+        if((slides.length - 1) === currentSlideIndex)
+            rightArrow.classList.add(`off`);
+        else if(0 !== currentSlideIndex)
+            leftArrow.classList.remove(`off`);
     }
 }
-
-
-
 
 leftArrow.addEventListener(`click`, goToPreviousSlide, false);
 rightArrow.addEventListener(`click`, goToNextSlide, false);
