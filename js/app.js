@@ -1,4 +1,5 @@
 let slideShow = document.querySelector(`.slide-show`);
+let slides = document.querySelectorAll(`.slide`);
 let leftArrow = document.getElementById(`left-arrow`);
 let rightArrow = document.getElementById(`right-arrow`);
 let currentSlideIndex = 0;
@@ -14,8 +15,11 @@ function goToPreviousSlide() {
 }
 
 function goToNextSlide() {
-    currentSlideIndex++;
-    slideShow.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
+    if((slides.length - 1) !== currentSlideIndex) {
+        currentSlideIndex++;
+        position = -slideWidth * currentSlideIndex;
+        slideShow.style.transform = `translateX(${position}px)`;
+    }
 }
 
 
