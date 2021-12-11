@@ -4,13 +4,23 @@
   margin-top: 440px;
 }
 
-.slide-show {
+.slide-show-box {
   margin: auto;
-  width: 250px;
+  width: 410px;
+  height: 250px;
   overflow: hidden;
+}
+
+.slide-show {
+  display: flex;
+  transition: 250ms;
 }
 
 .slide {
   display: flex;
-  transition: 250ms;
+}
+
+.text {
+  width: 200px;
+  height: 250px;
 }
