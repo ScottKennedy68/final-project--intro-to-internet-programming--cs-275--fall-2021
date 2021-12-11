@@ -9,9 +9,10 @@ function goToPreviousSlide() {
     slideShow.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
 }
 
-leftArrow.addEventListener(`click`, goToPreviousSlide, false);
-
-rightArrow.addEventListener(`click`, ()=>{
+function goToNextSlide() {
     currentSlideIndex++;
     slideShow.style.transform = `translateX(${-slideWidth * currentSlideIndex}px)`;
-});
+}
+
+leftArrow.addEventListener(`click`, goToPreviousSlide, false);
+rightArrow.addEventListener(`click`, goToNextSlide, false);
