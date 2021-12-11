@@ -2,7 +2,7 @@ let slide = document.querySelector(`.slide`);
 let leftArrow = document.getElementById(`left-arrow`);
 let rightArrow = document.getElementById(`right-arrow`);
 let currentSlideIndex = 0;
-let slideWidth = 210;
+let slideWidth = 250;
 
 leftArrow.addEventListener(`click`, ()=>{
     currentSlideIndex--;
