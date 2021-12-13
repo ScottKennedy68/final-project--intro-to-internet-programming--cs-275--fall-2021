@@ -103,7 +103,7 @@ let copyUnprocessedAssetsForProd = () => {
         `img/*.*`,
         `!img/*.gitignore`
     ], {dot: true})
-        .pipe(dest(`prod`));
+        .pipe(dest(`prod/img`));
 };
 
 let serve = () => {
