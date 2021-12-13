@@ -11,8 +11,8 @@ h1 {
 
 #left-arrow {
   position: fixed;
-  left: 32.5%;
-  top: 220px;
+  left: 32%;
+  top: 183px;
   z-index: 2;
   background: white;
 }
@@ -20,7 +20,7 @@ h1 {
 #right-arrow {
   position: fixed;
   left: 63%;
-  top: 220px;
+  top: 183px;
   z-index: 2;
   background: white;
 }
