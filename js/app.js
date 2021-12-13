@@ -17,6 +17,8 @@ function toggleArrows() {
     }
 }
 
+toggleArrows();
+
 function goToPreviousSlide() {
     if(0 !== currentSlideIndex) {
         currentSlideIndex--;
