@@ -5,7 +5,7 @@ body {
 h1 {
   font-family: Merriweather, sans-serif;
   font-size: 32px;
-  line-height: 2.4em;
+  line-height: 2.4rem;
   text-align: center;
 }
 
@@ -49,7 +49,7 @@ h1 {
 .text {
   width: 200px;
   height: 250px;
-  line-height: 1.125em;
+  line-height: 1.125rem;
 }
 
 .off {
