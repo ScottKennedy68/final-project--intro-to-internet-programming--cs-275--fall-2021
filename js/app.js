@@ -8,9 +8,9 @@ let position;
 
 function toggleArrows() {
     if(0 === currentSlideIndex)
-        leftArrow.classList.add(`off`);
-    else if((slides.length - 1) === currentSlideIndex)
         rightArrow.classList.add(`off`);
+    else if((slides.length - 1) === currentSlideIndex)
+        leftArrow.classList.add(`off`);
     else {
         leftArrow.classList.remove(`off`);
         rightArrow.classList.remove(`off`);
@@ -35,13 +35,13 @@ function goToNextSlide() {
     }
 }
 
-leftArrow.addEventListener(`click`, goToPreviousSlide, false);
-rightArrow.addEventListener(`click`, goToNextSlide, false);
+leftArrow.addEventListener(`click`, goToNextSlide, false);
+rightArrow.addEventListener(`click`, goToPreviousSlide, false);
 document.addEventListener(`keydown`, (key)=>{
     //Key codes found on
     //https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
     if(37 === key.keyCode)  //Checks for left arrow key
-        goToPreviousSlide();
-    else if(39 === key.keyCode) //Checks for right arrow key
         goToNextSlide();
+    else if(39 === key.keyCode) //Checks for right arrow key
+        goToPreviousSlide();
 });
