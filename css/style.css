@@ -11,16 +11,16 @@ h1 {
 
 #left-arrow {
   position: fixed;
-  margin-left: 500px;
-  margin-top: 115px;
+  left: 32.5%;
+  top: 220px;
   z-index: 2;
   background: white;
 }
 
 #right-arrow {
   position: fixed;
-  margin-left: 950px;
-  margin-top: 115px;
+  left: 63%;
+  top: 220px;
   z-index: 2;
   background: white;
 }
