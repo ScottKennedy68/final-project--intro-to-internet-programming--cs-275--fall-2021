@@ -6,15 +6,23 @@ let currentSlideIndex = 0;
 let slideWidth = 446;
 let position;
 
+function toggleArrows() {
+    if(0 === currentSlideIndex)
+        leftArrow.classList.add(`off`);
+    else if((slides.length - 1) === currentSlideIndex)
+        rightArrow.classList.add(`off`);
+    else {
+        leftArrow.classList.remove(`off`);
+        rightArrow.classList.remove(`off`);
+    }
+}
+
 function goToPreviousSlide() {
     if(0 !== currentSlideIndex) {
         currentSlideIndex--;
         position = -slideWidth * currentSlideIndex;
         slideShow.style.transform = `translateX(${position}px)`;
-        if(0 === currentSlideIndex)
-            leftArrow.classList.add(`off`);
-        else if((slides.length - 1) !== currentSlideIndex)
-            rightArrow.classList.remove(`off`);
+        toggleArrows();
     }
 }
 
@@ -23,10 +31,7 @@ function goToNextSlide() {
         currentSlideIndex++;
         position = -slideWidth * currentSlideIndex;
         slideShow.style.transform = `translateX(${position}px)`;
-        if((slides.length - 1) === currentSlideIndex)
-            rightArrow.classList.add(`off`);
-        else if(0 !== currentSlideIndex)
-            leftArrow.classList.remove(`off`);
+        toggleArrows();
     }
 }
 
